@@ -320,7 +320,7 @@ namespace
                 { gettext_noop( "Cavalry" ), gettext_noop( "Cavalries" ), 3, Race::KNGT, 5, { 300, 0, 0, 0, 0, 0, 0 } },
                 { gettext_noop( "Champion" ), gettext_noop( "Champions" ), 3, Race::KNGT, 5, { 400, 0, 0, 0, 0, 0, 0 } },  // Nick: cost 375->400
                 { gettext_noop( "Paladin" ), gettext_noop( "Paladins" ), 2, Race::KNGT, 6, { 600, 0, 0, 0, 0, 0, 0 } },
-                { gettext_noop( "Crusader" ), gettext_noop( "Crusaders" ), 2, Race::KNGT, 6, { 1050, 0, 0, 0, 0, 0, 0 } }, // Nick: cost 1000->1050
+                { gettext_noop( "Crusader" ), gettext_noop( "Crusaders" ), 2, Race::KNGT, 6, { 1100, 0, 0, 0, 0, 0, 0 } }, // Nick: cost 1000->1100
                 { gettext_noop( "Goblin" ), gettext_noop( "Goblins" ), 10, Race::BARB, 1, { 40, 0, 0, 0, 0, 0, 0 } },
                 { gettext_noop( "Orc" ), gettext_noop( "Orcs" ), 8, Race::BARB, 2, { 140, 0, 0, 0, 0, 0, 0 } },
                 { gettext_noop( "Orc Chief" ), gettext_noop( "Orc Chiefs" ), 8, Race::BARB, 2, { 175, 0, 0, 0, 0, 0, 0 } },
@@ -402,8 +402,8 @@ namespace
         monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::DOUBLE_DAMAGE_TO_UNDEAD );
         monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::IMMUNE_TO_CERTAIN_SPELL, 100, Spell::CURSE );
         monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::IMMUNE_TO_CERTAIN_SPELL, 100, Spell::MASSCURSE );
-        monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::ELEMENTAL_SPELL_DAMAGE_REDUCTION, 80, 0 ); // Nick: % dmg from elemental
-        monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::CERTAIN_SPELL_DAMAGE_REDUCTION, 60, Spell::ARMAGEDDON ); // Nick: % ARMAGEDDON
+        monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::ELEMENTAL_SPELL_DAMAGE_REDUCTION, 65, 0 ); // Nick: % dmg from elemental
+        monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::CERTAIN_SPELL_DAMAGE_REDUCTION, 65, Spell::ARMAGEDDON ); // Nick: % ARMAGEDDON
         monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::EARTH_CREATURE ); // Nick: double dmg vs dragons & flying nasties
         monsterData[Monster::CRUSADER].battleStats.weaknesses.emplace_back( fheroes2::MonsterWeaknessType::DOUBLE_DAMAGE_FROM_AIR_CREATURES ); // minor weakness
         // monsterData[Monster::CRUSADER].battleStats.abilities.emplace_back( fheroes2::MonsterAbilityType::CERTAIN_SPELL_DAMAGE_REDUCTION, 80, Spell::LIGHTNINGBOLT ); // Nick: % LIGHTNINGBOLT
