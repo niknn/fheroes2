@@ -55,8 +55,8 @@ namespace
     const std::array<SpellStats, Spell::SPELL_COUNT> spells = { {
         //  name | spell points | movement points | min movement points | image id | extra value | description
         { "Unknown", 0, 0, 0, 0, 0, "Unknown spell." },
-        { gettext_noop( "Fireball" ), 9, 0, 0, 8, 10, gettext_noop( "Causes a giant fireball to strike the selected area, damaging all nearby creatures." ) },
-        { gettext_noop( "Fireblast" ), 15, 0, 0, 9, 10,
+        { gettext_noop( "Fireball" ), 9, 0, 0, 8, 15, gettext_noop( "Causes a giant fireball to strike the selected area, damaging all nearby creatures." ) }, // Nick: 10->15
+        { gettext_noop( "Fireblast" ), 15, 0, 0, 9, 15, // Nick: 10->15
           gettext_noop( "An improved version of fireball, fireblast affects two hexes around the center point of the spell, rather than one." ) },
         { gettext_noop( "Lightning Bolt" ), 7, 0, 0, 4, 25, gettext_noop( "Causes a bolt of electrical energy to strike the selected creature." ) },
         { gettext_noop( "Chain Lightning" ), 15, 0, 0, 5, 40,
@@ -78,8 +78,9 @@ namespace
         { gettext_noop( "Bless" ), 3, 0, 0, 7, 0, gettext_noop( "Causes the selected creatures to inflict maximum damage." ) },
         { gettext_noop( "Mass Bless" ), 12, 0, 0, 63, 0, gettext_noop( "Causes all of your units to inflict maximum damage." ) },
         { gettext_noop( "Stoneskin" ), 3, 0, 0, 31, 3, gettext_noop( "Magically increases the defense skill of the selected creatures." ) },
-        { gettext_noop( "Steelskin" ), 6, 0, 0, 30, 5,
-          gettext_noop( "Increases the defense skill of the targeted creatures. This is an improved version of Stoneskin." ) },
+        { gettext_noop( "Steelskin" ), 7, 0, 0, 30, 6,
+          gettext_noop( "Increases the defense skill of the targeted creatures. This is an improved version of Stoneskin." ) }, // Nick: cost 6->7, def. 5->6
+
         { gettext_noop( "Curse" ), 3, 0, 0, 3, 0, gettext_noop( "Causes the selected creatures to inflict minimum damage." ) },
         { gettext_noop( "Mass Curse" ), 12, 0, 0, 64, 0, gettext_noop( "Causes all enemy troops to inflict minimum damage." ) },
         { gettext_noop( "Holy Word" ), 9, 0, 0, 22, 10, gettext_noop( "Damages all undead in the battle." ) },
@@ -89,23 +90,23 @@ namespace
         { gettext_noop( "Mass Dispel" ), 12, 0, 0, 73, 0, gettext_noop( "Removes all magic spells from all creatures." ) },
         { gettext_noop( "Magic Arrow" ), 3, 0, 0, 38, 10, gettext_noop( "Causes a magic arrow to strike the selected target." ) },
         { gettext_noop( "Berserker" ), 12, 0, 0, 19, 0, gettext_noop( "Causes a creature to attack its nearest neighbor." ) },
-        { gettext_noop( "Armageddon" ), 20, 0, 0, 16, 50, gettext_noop( "Holy terror strikes the battlefield, causing severe damage to all creatures." ) },
+        { gettext_noop( "Armageddon" ), 25, 0, 0, 16, 50, gettext_noop( "Holy terror strikes the battlefield, causing severe damage to all creatures." ) },  // Nick: 20->25
         { gettext_noop( "Elemental Storm" ), 15, 0, 0, 11, 25, gettext_noop( "Magical elements pour down on the battlefield, damaging all creatures." ) },
         { gettext_noop( "Meteor Shower" ), 15, 0, 0, 24, 25, gettext_noop( "A rain of rocks strikes an area of the battlefield, damaging all nearby creatures." ) },
-        { gettext_noop( "Paralyze" ), 9, 0, 0, 20, 0, gettext_noop( "The targeted creatures are paralyzed, unable to move or retaliate." ) },
-        { gettext_noop( "Hypnotize" ), 15, 0, 0, 37, 25,
+        { gettext_noop( "Paralyze" ), 7, 0, 0, 20, 0, gettext_noop( "The targeted creatures are paralyzed, unable to move or retaliate." ) }, // Nick: 9->7
+        { gettext_noop( "Hypnotize" ), 25, 0, 0, 37, 35, // Nick: man.cost: 15->25, HP: 25->50
           gettext_noop( "Brings a single enemy unit under your control if its hits are less than %{count} times the caster's spell power." ) },
         { gettext_noop( "Cold Ray" ), 6, 0, 0, 36, 20, gettext_noop( "Drains body heat from a single enemy unit." ) },
-        { gettext_noop( "Cold Ring" ), 9, 0, 0, 35, 10,
+        { gettext_noop( "Cold Ring" ), 12, 0, 0, 35, 20, // Nick: mana.cost: 9->12, dmg: 10->20
           gettext_noop( "Drains body heat from all units surrounding the center point, but not including the center point." ) },
         { gettext_noop( "Disrupting Ray" ), 7, 0, 0, 34, 3, gettext_noop( "Reduces the defense rating of an enemy unit by three." ) },
         { gettext_noop( "Death Ripple" ), 6, 0, 0, 29, 5, gettext_noop( "Damages all living (non-undead) units in the battle." ) },
         { gettext_noop( "Death Wave" ), 10, 0, 0, 28, 10,
           gettext_noop( "Damages all living (non-undead) units in the battle. This spell is an improved version of Death Ripple." ) },
-        { gettext_noop( "Dragon Slayer" ), 6, 0, 0, 32, 5, gettext_noop( "Greatly increases a unit's attack skill vs. Dragons." ) },
+        { gettext_noop( "Dragon Slayer" ), 7, 0, 0, 32, 9, gettext_noop( "Greatly increases a unit's attack skill vs. Dragons." ) }, // Nick: cost 6->7, atk. 5->9
         { gettext_noop( "Blood Lust" ), 3, 0, 0, 27, 3, gettext_noop( "Increases a unit's attack skill." ) },
-        { gettext_noop( "Animate Dead" ), 10, 0, 0, 25, 50, gettext_noop( "Resurrects creatures from a damaged or dead undead unit permanently." ) },
-        { gettext_noop( "Mirror Image" ), 25, 0, 0, 26, 0,
+        { gettext_noop( "Animate Dead" ), 12, 0, 0, 25, 50, gettext_noop( "Resurrects creatures from a damaged or dead undead unit permanently." ) }, // Nick: 10->12
+        { gettext_noop( "Mirror Image" ), 20, 0, 0, 26, 0, // Nick: 25->20
           gettext_noop(
               "Creates an illusionary unit that duplicates one of your existing units. This illusionary unit does the same damages as the original, but will vanish if it takes any damage." ) },
         { gettext_noop( "Shield" ), 3, 0, 0, 15, 2,
