@@ -237,8 +237,8 @@ namespace
             { 1, 1, 1, 1, 1, Speed::VERYSLOW, 0, 0, {}, {} }, // Peasant
             { 5, 3, 2, 3, 10, Speed::VERYSLOW, 12, 0, {}, {} }, // Archer
             { 5, 3, 2, 3, 10, Speed::AVERAGE, 24, 0, {}, {} }, // Ranger
-            { 5, 9, 3, 4, 15, Speed::AVERAGE, 0, 0, {}, {} }, // Pikeman
-            { 5, 9, 3, 4, 20, Speed::FAST, 0, 0, {}, {} }, // Veteran Pikeman
+            { 7, 7, 3, 4, 15, Speed::AVERAGE, 0, 0, {}, {} }, // Pikeman    // Nick: 5, 9 -> 7,7
+            { 7, 7, 3, 4, 20, Speed::FAST, 0, 0, {}, {} }, // Veteran Pikeman // Nick: 5, 9 -> 7,7
             { 7, 9, 4, 6, 25, Speed::AVERAGE, 0, 0, {}, {} }, // Swordsman
             { 7, 9, 4, 6, 30, Speed::FAST, 0, 0, {}, {} }, // Master Swordsman
             { 10, 9, 5, 10, 30, Speed::VERYFAST, 0, 0, {}, {} }, // Cavalry
