@@ -1,3 +1,16 @@
+# fheroes2 Rebalance Mod by Nick
+
+⚠️ **Notice:** This repository is a modified fork of the official [fheroes2 project](https://github.com/ihhub/fheroes2). 
+
+This mod provides a comprehensive mechanical overhaul of *Heroes of Might and Magic II*. Rather than just tweaking base stats, this version actively adjusts creature costs, unique abilities, elemental weaknesses, spell interactions, hero skills and artifacts to modernize the game's balance.
+
+### 🎯 Core Objectives:
+1. **Expand Tactical Diversity:** Broaden the viable options in combat to encourage creative, varied battle strategies rather than relying on a single dominant "meta."
+2. **Address Faction Imbalance:** Introduce specific mechanics and strategic counters designed to mitigate historically overpowered builds (such as the Warlock's "Dragons + Armageddon" wipe or unchecked Necromancer "Animate Dead" loops).
+
+---
+
+
 # fheroes2
 
 **fheroes2** is a recreation of the Heroes of Might and Magic II game engine.
