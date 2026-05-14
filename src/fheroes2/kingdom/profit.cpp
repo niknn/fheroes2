@@ -40,7 +40,7 @@ Funds ProfitConditions::FromBuilding( uint32_t building, int race )
         return Funds( Cost{ 250, 0, 0, 0, 0, 0, 0 } );
     case BUILD_SPEC:
         if ( race == Race::WRLK )
-            return Funds( Cost{ 500, 0, 0, 0, 0, 0, 0 } );
+            return Funds( Cost{ 350, 0, 0, 0, 0, 0, 0 } );  // Nick: 500->350
         break;
     default:
         break;
