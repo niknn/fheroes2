@@ -524,9 +524,9 @@ namespace
                       "You come upon a caravan of gypsies who are feasting and fortifying their bodies with mead. They call you forward and say \"If you prove that you can dance the Rama-Buta, we will reward you.\" You don't know it, but try anyway. They laugh hysterically, but admire your bravery, giving you a Crystal Ball." ),
                   {},
                   {} },
-                { gettext_noop( "Heart of Fire" ), gettext_noop( "The %{name} provides %{count} percent protection from fire, but doubles the damage taken from cold." ), gettext_noop( "You enter a recently burned glade and come upon a Fire Elemental sitting atop a rock. It looks up, its flaming face contorted in a look of severe pain. It then tosses a glowing object at you. You put up your hands to block it, but it passes right through them and sears itself into your chest." ), {}, {} },
+                { gettext_noop( "Heart of Fire" ), gettext_noop( "The %{name} provides %{count} percent protection from fire, but increases the damage taken from cold by 25%." ), gettext_noop( "You enter a recently burned glade and come upon a Fire Elemental sitting atop a rock. It looks up, its flaming face contorted in a look of severe pain. It then tosses a glowing object at you. You put up your hands to block it, but it passes right through them and sears itself into your chest." ), {}, {} }, //Nick: doubles->25% incr.
                 { gettext_noop( "Heart of Ice" ),
-                  gettext_noop( "The %{name} provides %{count} percent protection from cold, but doubles the damage taken from fire." ),
+                  gettext_noop( "The %{name} provides %{count} percent protection from cold, but increases the damage taken from fire by 25%." ), //Nick: doubles->25% incr.
                   gettext_noop(
                       "Suddenly, a biting coldness engulfs your body. You seize up, falling from your horse. The pain subsides, but you still feel as if your chest is frozen. As you pick yourself up off of the ground, you hear hearty laughter. You turn around just in time to see a Frost Giant run off into the woods and disappear." ),
                   {},
@@ -784,11 +784,11 @@ namespace
 
         artifactData[Artifact::CRYSTAL_BALL].bonuses.emplace_back( fheroes2::ArtifactBonusType::VIEW_MONSTER_INFORMATION );
 
-        artifactData[Artifact::HEART_FIRE].bonuses.emplace_back( fheroes2::ArtifactBonusType::FIRE_SPELL_DAMAGE_REDUCTION_PERCENT, 50 );
-        artifactData[Artifact::HEART_FIRE].curses.emplace_back( fheroes2::ArtifactCurseType::COLD_SPELL_EXTRA_DAMAGE_PERCENT, 100 );
+        artifactData[Artifact::HEART_FIRE].bonuses.emplace_back( fheroes2::ArtifactBonusType::FIRE_SPELL_DAMAGE_REDUCTION_PERCENT, 50 );  
+        artifactData[Artifact::HEART_FIRE].curses.emplace_back( fheroes2::ArtifactCurseType::COLD_SPELL_EXTRA_DAMAGE_PERCENT, 25 ); // Nick: 100->25
 
         artifactData[Artifact::HEART_ICE].bonuses.emplace_back( fheroes2::ArtifactBonusType::COLD_SPELL_DAMAGE_REDUCTION_PERCENT, 50 );
-        artifactData[Artifact::HEART_ICE].curses.emplace_back( fheroes2::ArtifactCurseType::FIRE_SPELL_EXTRA_DAMAGE_PERCENT, 100 );
+        artifactData[Artifact::HEART_ICE].curses.emplace_back( fheroes2::ArtifactCurseType::FIRE_SPELL_EXTRA_DAMAGE_PERCENT, 25 ); // Nick: 100->25
 
         artifactData[Artifact::HELMET_ANDURAN].bonuses.emplace_back( fheroes2::ArtifactBonusType::SPELL_POWER_SKILL, 5 );
 
