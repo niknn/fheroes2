@@ -96,10 +96,10 @@ namespace
                                                                                                  { "navigation", { 33, 66, 100 } },
                                                                                                  { "leadership", { 1, 2, 3 } },
                                                                                                  { "wisdom", { 3, 4, 5 } },
-                                                                                                 { "mysticism", { 1, 2, 3 } },
+                                                                                                 { "mysticism", { 2, 4, 6 } },  // Nick: { 1, 2, 3 }->{ 2, 4, 6 } spell points regen per day
                                                                                                  { "luck", { 1, 2, 3 } },
                                                                                                  { "ballistics", { 0, 0, 0 } },
-                                                                                                 { "eagleeye", { 20, 30, 40 } },
+                                                                                                 { "eagleeye", { 25, 40, 60 } }, // Nick: { 20, 30, 40 } -> { 25, 40, 60 } - higher probabilitites
                                                                                                  { "necromancy", { 10, 20, 30 } },
                                                                                                  { "estates", { 100, 250, 500 } } } };
 }
